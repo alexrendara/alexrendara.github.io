@@ -86,13 +86,8 @@ html[lang=en] .outcomes strong{font-weight:500}
 
 /* Match the Chinese home page's visual weight: same ink colour, comparable sizes */
 html[lang=en]{--en-ink:#30342f;--en-soft:#53544c}
-html[lang=en] .profile .eyebrow{font-size:13px;font-weight:500;letter-spacing:.14em;color:#53544c}
-html[lang=en] .profile .name-label{font-size:13px;font-weight:500;letter-spacing:.14em;color:#30342f}
 html[lang=en] .profile h1{color:#30342f}
-html[lang=en] .profile .disciplines{font-size:19px;font-weight:400;line-height:1.65;letter-spacing:.01em;color:#30342f}
 html[lang=en] .profile h2,html[lang=en] .contact-note h2{color:#30342f}
-html[lang=en] .profile .paper .profile-bio{font-size:17px;font-weight:400;line-height:1.6;letter-spacing:.005em;color:#30342f}
-html[lang=en] .profile .signature{font-size:20px;font-weight:400;letter-spacing:.01em}
 html[lang=en] .contact-note .eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.1em;color:#656758}
 html[lang=en] .contact-note #copy-email,html[lang=en] .contact-note a{font-size:15px;letter-spacing:.01em;color:#30342f}
 html[lang=en] .contact-note p{font-size:13px;color:#30342f}
@@ -102,8 +97,18 @@ html[lang=en] .career-note .career-date{font-size:14px;letter-spacing:.1em;color
 html[lang=en] .career-note .career-role{font-size:18px}
 html[lang=en] .career-note .career-keywords{font-size:14.5px;font-weight:400}
 html[lang=en] .project-card>span{font-size:19px;color:#202522}
-html[lang=en] .profile .paper .profile-bio{font-size:16px;line-height:1.55}
-html[lang=en] .profile .paper .profile-bio{font-size:15.5px;line-height:1.5}
-html[lang=en] .profile .disciplines{line-height:1.5}
-html[lang=en] .profile .paper .profile-bio{font-size:15px;line-height:1.5}
-html[lang=en] .profile .signature{font-style:normal;font-weight:500;font-size:19px;letter-spacing:.01em}
+
+/* Profile card type scale — four levels only */
+html[lang=en] .profile{
+ --pf-label:12px;   /* Profile / Name */
+ --pf-display:48px; /* the name */
+ --pf-heading:32px; /* About me */
+ --pf-body:16px;    /* disciplines, bio, signature */
+ --pf-body-lh:1.6;
+}
+html[lang=en] .profile .eyebrow,html[lang=en] .profile .name-label{font-size:var(--pf-label);font-weight:500;line-height:1.6;letter-spacing:.14em;text-transform:uppercase;color:#53544c}
+html[lang=en] .profile h1{font-size:var(--pf-display);line-height:1.05;letter-spacing:0}
+html[lang=en] .profile h2{font-size:var(--pf-heading);line-height:1.15;letter-spacing:0}
+html[lang=en] .profile .disciplines,html[lang=en] .profile .paper .profile-bio,html[lang=en] .profile .signature{font-size:var(--pf-body);font-weight:400;font-style:normal;line-height:var(--pf-body-lh);letter-spacing:.005em}
+html[lang=en] .profile .disciplines,html[lang=en] .profile .paper .profile-bio{color:#30342f}
+html[lang=en] .profile .signature{font-weight:500}
