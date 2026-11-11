@@ -1,0 +1,109 @@
+@font-face{font-family:'EB Garamond';src:url('assets/fonts/en/eb-garamond-latin-600-normal.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'EB Garamond';src:url('assets/fonts/en/eb-garamond-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'EB Garamond';src:url('assets/fonts/en/eb-garamond-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'EB Garamond';src:url('assets/fonts/en/eb-garamond-latin-500-normal.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'EB Garamond';src:url('assets/fonts/en/eb-garamond-latin-500-italic.woff2') format('woff2');font-weight:500;font-style:italic;font-display:swap}
+/* English edition typography — single geometric sans (Poppins), airy spacing.
+   Bundled locally (SIL OFL). */
+@font-face{font-family:'Poppins';src:url('assets/fonts/en/poppins-latin-300-normal.woff2') format('woff2');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('assets/fonts/en/poppins-latin-300-italic.woff2') format('woff2');font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:'Poppins';src:url('assets/fonts/en/poppins-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Poppins';src:url('assets/fonts/en/poppins-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Poppins';src:url('assets/fonts/en/poppins-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Poppins';src:url('assets/fonts/en/poppins-latin-600-normal.woff2') format('woff2');font-weight:600;font-display:swap}
+
+html[lang=en]{
+ --en-font:'Poppins',PuHui,'PingFang SC',sans-serif;
+ --en-ink:#2f2e2b;
+ --en-soft:#6a665d;
+}
+
+/* Everything in Poppins */
+html[lang=en] body,html[lang=en] body *:not(svg):not(svg *){font-family:var(--en-font)}
+
+/* Labels: small uppercase, generously spaced */
+html[lang=en] .profile .eyebrow,html[lang=en] .profile .name-label,html[lang=en] .contact-note .eyebrow,html[lang=en] .career-note .career-date{
+ font-size:11px;font-weight:500;letter-spacing:.16em;line-height:1.6;text-transform:uppercase;color:var(--en-soft)}
+
+/* Headings: medium weight, slight positive tracking */
+html[lang=en] .profile h1{font-weight:500;font-size:40px;line-height:1.15;letter-spacing:.02em;white-space:nowrap;color:var(--en-ink)}
+html[lang=en] .profile .disciplines{font-weight:400;font-size:16px;line-height:1.75;letter-spacing:.02em;color:#3d3b36}
+html[lang=en] .profile h2,html[lang=en] .contact-note h2{font-weight:500;font-size:26px;line-height:1.3;letter-spacing:.02em;color:var(--en-ink)}
+html[lang=en] .profile .paper .profile-bio{font-size:14.5px;line-height:1.75;font-weight:300;letter-spacing:.015em;color:#36342e}
+html[lang=en] .profile .signature{font-style:italic;font-weight:300;font-size:18px;letter-spacing:.03em}
+
+/* Contact card */
+html[lang=en] .contact-note #copy-email,html[lang=en] .contact-note a,html[lang=en] .contact-note p{font-size:13px;font-weight:400;letter-spacing:.02em}
+
+/* Year labels */
+html[lang=en] .year-tag{font-weight:500;font-size:22px;letter-spacing:.06em;color:var(--en-ink)}
+
+/* Career notes */
+html[lang=en] .career-note .career-company{font-weight:500;font-size:20px;line-height:1.35;letter-spacing:.01em}
+html[lang=en] .career-note .career-role{font-weight:400;font-size:16px;line-height:1.5;letter-spacing:.02em}
+html[lang=en] .career-note .career-keywords{font-size:12.5px;font-weight:300;line-height:1.7;letter-spacing:.02em}
+
+/* Project cards on the board */
+html[lang=en] .project-card>span{font-weight:400;font-size:17px;line-height:1.45;letter-spacing:.02em}
+
+/* Chrome */
+html[lang=en] .view-tools button{font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+html[lang=en] .language-switch{font-size:13px;font-weight:400;letter-spacing:.06em}
+
+/* Detail & year pages: lighter headings, open tracking */
+html[lang=en] .project-detail h1,html[lang=en] .project-detail h2,html[lang=en] .project-detail h3,
+html[lang=en] main h1,html[lang=en] main h2,html[lang=en] main h3{font-weight:500;letter-spacing:.005em}
+html[lang=en] main h1{line-height:1.18}
+html[lang=en] main h2,html[lang=en] main h3{line-height:1.3}
+html[lang=en] main p,html[lang=en] main li{letter-spacing:.012em}
+/* Poppins is wider than the original face: keep big titles inside the page */
+html[lang=en] .year-hero h1,html[lang=en] .case-hero h1,html[lang=en] #year-title{max-width:100%;white-space:normal;overflow-wrap:break-word;text-wrap:balance}
+html[lang=en] .archive-page .year-hero h1{font-size:clamp(2.4rem,5vw,4.6rem);line-height:1.12}
+html[lang=en] .case-hero h1{font-size:clamp(2.3rem,4.6vw,4.4rem);line-height:1.15}
+html[lang=en] .outcomes>*{min-width:0}
+html[lang=en] .outcomes strong{overflow-wrap:anywhere}
+@media(max-width:600px){html[lang=en] .outcomes{grid-template-columns:minmax(0,1fr)}}
+html[lang=en] .outcomes strong{font-size:clamp(1.9rem,4.4vw,3.1rem);letter-spacing:0}
+
+/* Headings: EB Garamond serif (body stays Poppins) */
+html[lang=en]{--en-serif:'EB Garamond',Garamond,'Times New Roman',PuHui,serif}
+/* body h* :not(svg) outranks the global Poppins rule */
+html[lang=en] body :is(h1,h2,h3,.career-company):not(svg):not(svg *){font-family:var(--en-serif);font-weight:400;letter-spacing:0}
+html[lang=en] .profile h1{font-size:50px;line-height:1.05;letter-spacing:-.005em}
+html[lang=en] .profile h2,html[lang=en] .contact-note h2{font-size:34px;line-height:1.1}
+html[lang=en] main h1,html[lang=en] .case-hero h1,html[lang=en] .archive-page .year-hero h1{line-height:1.08}
+html[lang=en] main h2{line-height:1.15}
+html[lang=en] main h3{line-height:1.25}
+html[lang=en] .career-note .career-company{font-family:var(--en-serif);font-weight:400;font-size:25px;line-height:1.15}
+/* Garamond numerals keep stats compact */
+html[lang=en] .outcomes strong{font-family:var(--en-serif);font-weight:400}
+html[lang=en] body :is(h1,h2,h3,.career-company) :not(svg):not(svg *){font-family:inherit}
+
+/* Heavier serif headings */
+html[lang=en] body :is(h1,h2,h3,.career-company):not(svg):not(svg *){font-weight:500}
+html[lang=en] body :is(h1,.profile h1):not(svg):not(svg *){font-weight:600}
+html[lang=en] .outcomes strong{font-weight:500}
+
+/* Match the Chinese home page's visual weight: same ink colour, comparable sizes */
+html[lang=en]{--en-ink:#30342f;--en-soft:#53544c}
+html[lang=en] .profile .eyebrow{font-size:13px;font-weight:500;letter-spacing:.14em;color:#53544c}
+html[lang=en] .profile .name-label{font-size:13px;font-weight:500;letter-spacing:.14em;color:#30342f}
+html[lang=en] .profile h1{color:#30342f}
+html[lang=en] .profile .disciplines{font-size:19px;font-weight:400;line-height:1.65;letter-spacing:.01em;color:#30342f}
+html[lang=en] .profile h2,html[lang=en] .contact-note h2{color:#30342f}
+html[lang=en] .profile .paper .profile-bio{font-size:17px;font-weight:400;line-height:1.6;letter-spacing:.005em;color:#30342f}
+html[lang=en] .profile .signature{font-size:20px;font-weight:400;letter-spacing:.01em}
+html[lang=en] .contact-note .eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.1em;color:#656758}
+html[lang=en] .contact-note #copy-email,html[lang=en] .contact-note a{font-size:15px;letter-spacing:.01em;color:#30342f}
+html[lang=en] .contact-note p{font-size:13px;color:#30342f}
+html[lang=en] .year-tag{font-size:27px;font-weight:500;letter-spacing:.04em;color:#30342f}
+html[lang=en] .view-tools button{font-size:13px;letter-spacing:.1em;color:#30342f}
+html[lang=en] .career-note .career-date{font-size:14px;letter-spacing:.1em;color:#55594f}
+html[lang=en] .career-note .career-role{font-size:18px}
+html[lang=en] .career-note .career-keywords{font-size:14.5px;font-weight:400}
+html[lang=en] .project-card>span{font-size:19px;color:#202522}
+html[lang=en] .profile .paper .profile-bio{font-size:16px;line-height:1.55}
+html[lang=en] .profile .paper .profile-bio{font-size:15.5px;line-height:1.5}
+html[lang=en] .profile .disciplines{line-height:1.5}
+html[lang=en] .profile .paper .profile-bio{font-size:15px;line-height:1.5}
+html[lang=en] .profile .signature{font-style:normal;font-weight:500;font-size:19px;letter-spacing:.01em}
